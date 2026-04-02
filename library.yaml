@@ -32,7 +32,25 @@ library:
     - name: "meta-validator"
       description: "meta skill for creating an agent that validates the performance of other agents based on their interactions and outcomes."
       source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/validator.md"
-  agents: []
+    - name: "vtsp-kiwi-dev-improve"
+      description: "Use after significant development work on vtsp-kiwi-dev to detect drift, update the expertise file, and propagate changes to all generated companion skills. Run this periodically to keep the skill set current."
+      source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/skills/vtsp-kiwi-dev-improve.md"
+  agents:
+    - name: "vtsp-kiwi-dev-developer"
+      description: "Use when developing firmware features, debugging issues, adding new blocks, or understanding the architecture of the vtsp-kiwi-dev ESP32-P4 firmware codebase."
+      source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/agents/vtsp-kiwi-dev-developer.md"
+    - name: "vtsp-kiwi-dev-debugger"
+      description: "Use when diagnosing bugs, triaging failures, or investigating unexpected behavior in the vtsp-kiwi-dev ESP32-P4 firmware codebase."
+      source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/agents/vtsp-kiwi-dev-debugger.md"
+    - name: "vtsp-kiwi-dev-validator"
+      description: "Use when writing test cases, verifying fixes, or validating that changes to vtsp-kiwi-dev firmware meet VTSP protocol conventions and build cleanly."
+      source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/agents/vtsp-kiwi-dev-validator.md"
+    - name: "vtsp-kiwi-dev-suggester"
+      description: "Use when looking for improvements, creative ideas, or things you might have missed in the vtsp-kiwi-dev firmware. Read-only — analyzes and suggests but does not make changes."
+      source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/agents/vtsp-kiwi-dev-suggester.md"
+    - name: "vtsp-kiwi-dev-integration"
+      description: "Use when wiring vtsp-kiwi-dev into the larger VTSP system, adding new integration pathways, or diagnosing cross-repo communication failures between the firmware, daemon, and app clients."
+      source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/agents/vtsp-kiwi-dev-integration.md"
   prompts: []
   commands:
     - name: "meta-create-developer-command"
