@@ -10,6 +10,33 @@ default_dirs:
     - global: ~/.claude/commands/
 
 library:
-  skills: []
+  skills: 
+    - name: "meta-create-expertise-file"
+      description: "Creates an expertise file for a specified domain."
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/create-expertise-file.md"
+    - name: "meta-debugger"
+      description: "meta skill for creating debugging agents to be used by a developer agent"
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/debugger.md"
+    - name: "meta-developer"
+      description: "meta skill for creating an agent that understands a specific repo"
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/developer.md"
+    - name: "meta-improve"
+      description: "meta skill for creating an agent that suggests improvements to itself or other agents based on their interactions and performance."
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/improve.md"
+    - name: "meta-integration"
+      description: "meta skill for creating an agent that integrates a specific repo with other repos"
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/integration.md"
+    - name: "meta-suggester"
+      description: "meta skill for creating an agent that suggests new improvements for a specific repo"
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/suggester.md"
+    - name: "meta-validator"
+      description: "meta skill for creating an agent that validates the performance of other agents based on their interactions and outcomes."
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/skills/validator.md"
   agents: []
   prompts: []
+  commands:
+    - name: "meta-create-developer-command"
+      description: "meta command for creating a developer agent."
+      source: "https://github.com/tigershark224/meta-agent-skills/tree/main/commands/generate-developer.md"
+    
+    
