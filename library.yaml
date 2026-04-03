@@ -66,6 +66,10 @@ library:
     - name: "meta-create-developer-command"
       description: "meta command for creating a developer agent."
       source: "https://github.com/tigershark224/meta-agent-skills/tree/main/commands/generate-developer.md"
+    - name: "prime-with-developer"
+      description: "Load a developer agent file and use it to prime the current session's context — reads the agent file, executes its Context Priming section, and summarizes the repo."
+      source: "C:/Software/meta-agent-skills/commands/prime-with-developer.md"
+      requires: [command:generate-developer]
   expertise:
     - name: "vtsp-kiwi-dev-expertise"
       description: "Structured mental model of the vtsp-kiwi-dev ESP32-P4 firmware codebase. Tracks checkpoints for drift detection."
