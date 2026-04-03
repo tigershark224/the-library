@@ -8,6 +8,12 @@ default_dirs:
   prompts:
     - default: .claude/commands/
     - global: ~/.claude/commands/
+  commands:
+    - default: .claude/commands/
+    - global: ~/.claude/commands/
+  expertise:
+    - default: .claude/agents/
+    - global: ~/.claude/agents/
 
 library:
   skills: 
@@ -53,8 +59,15 @@ library:
       source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/agents/vtsp-kiwi-dev-integration.md"
   prompts: []
   commands:
+    - name: "generate-developer"
+      description: "Invoke the meta-developer skill using two paths to generate a developer agent file for a repository."
+      source: "C:/Software/meta-agent-skills/commands/generate-developer.md"
+      requires: [skill:meta-developer]
     - name: "meta-create-developer-command"
       description: "meta command for creating a developer agent."
       source: "https://github.com/tigershark224/meta-agent-skills/tree/main/commands/generate-developer.md"
-    
-    
+  expertise:
+    - name: "vtsp-kiwi-dev-expertise"
+      description: "Structured mental model of the vtsp-kiwi-dev ESP32-P4 firmware codebase. Tracks checkpoints for drift detection."
+      source: "https://github.com/vtprodesign-inc/vtsp-claude-skills/tree/main/agents/expertise.yaml"
+      paired_skill: "vtsp-kiwi-dev-improve"
